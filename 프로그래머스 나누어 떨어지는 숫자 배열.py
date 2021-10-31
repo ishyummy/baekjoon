@@ -1,11 +1,5 @@
 def solution(arr, divisor):
-    answer = []
-    for a in arr:
-        if not a % divisor:
-            answer.append(a)
-    if not answer:
-        answer.append(-1)
-    return sorted(answer)
+    return sorted(a for a in arr if not a % divisor) or [-1]
 
 
 arr = [5, 9, 7, 10]
